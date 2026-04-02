@@ -1,8 +1,5 @@
 # 📚 RESOURCES
 
-```markdown id="frontend-resources-01"
-# Resources
-
 Use these when stuck — not before trying.
 
 ---
@@ -24,5 +21,4 @@ Use these when stuck — not before trying.
 ## ⚠️ Rule
 
 Don’t fall into tutorial loops.
-
 Use resources to solve **specific problems only**.
