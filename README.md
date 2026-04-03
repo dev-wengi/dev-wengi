@@ -1,5 +1,16 @@
 # Dev-Wengi
 
+<div align="center">
+  
+  ![Dev-Wengi Logo](https://img.shields.io/badge/Dev--Wengi-Build%20Real%20Projects-blueviolet?style=for-the-badge&logo=code)
+  
+  [![GitHub Issues](https://img.shields.io/github/issues/kc-clintone/dev-wengi?style=flat-square&color=3498db)](https://github.com/kc-clintone/dev-wengi/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kc-clintone/dev-wengi?style=flat-square&color=2ecc71)](https://github.com/kc-clintone/dev-wengi/pulls)
+  [![GitHub Contributors](https://img.shields.io/github/contributors/kc-clintone/dev-wengi?style=flat-square&color=f39c12)](https://github.com/kc-clintone/dev-wengi/graphs/contributors)
+  [![License](https://img.shields.io/badge/license-MIT-blueviolet?style=flat-square)](LICENSE)
+  
+</div>
+
 **Learn to code by building real projects — with real people.**
 
 No tutorials. No fluff. Just hands-on experience.
@@ -46,7 +57,7 @@ When you're done:
 * Get feedback
 * Unlock the next level
 
-Progress isn’t given — it’s earned.
+Progress isn't given — it's earned.
 
 ---
 
@@ -75,13 +86,13 @@ Skip the warm-up → dive into projects → solve real problems
 
 ## 🤝 Community
 
-You’re building, not struggling in silence.
+You're building, not struggling in silence.
 
-* Ask questions in Discussions & on [Discord]("https://discord.com")
+* Ask questions in Discussions & on [Discord](https://discord.com)
 * Help others when you can
 * Share what you learn
 
-(Teaching is just debugging someone else’s confusion.)
+(Teaching is just debugging someone else's confusion.)
 
 ---
 
@@ -95,4 +106,4 @@ You’re building, not struggling in silence.
 
 ## ⚡ One Rule
 
-> Don’t just read. Build something. Break it. Fix it. Repeat.
+> Don't just read. Build something. Break it. Fix it. Repeat.
