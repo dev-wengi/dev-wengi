@@ -2,28 +2,40 @@
 
 <div align="center">
   
-  ![Dev-Wengi Logo](https://img.shields.io/badge/Dev--Wengi-Build%20Real%20Projects-blueviolet?style=for-the-badge&logo=code)
-  
-  [![GitHub Issues](https://img.shields.io/github/issues/kc-clintone/dev-wengi?style=flat-square&color=3498db)](https://github.com/kc-clintone/dev-wengi/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kc-clintone/dev-wengi?style=flat-square&color=2ecc71)](https://github.com/kc-clintone/dev-wengi/pulls)
-  [![GitHub Contributors](https://img.shields.io/github/contributors/kc-clintone/dev-wengi?style=flat-square&color=f39c12)](https://github.com/kc-clintone/dev-wengi/graphs/contributors)
-  [![License](https://img.shields.io/badge/license-MIT-blueviolet?style=flat-square)](LICENSE)
-  
+  ![Dev-Wengi Logo](assets/logos/2.png)
 </div>
 
-**Learn to code by building real projects — with real people.**
+
+
+**Learn to code by building real projects, with real people.**
+
+**dev.wengi** is a developer-focused community designed to inspire, support, and empower individuals at every stage of their tech journey.
+The community simplifies the process of learning and breaking into tech by providing curated resources, practical guidance, and opportunities to work on real-world problems.
+More than just a learning space, **dev.wengi** fosters collaboration and connection, bringing together individuals who are eager to build, explore, and grow together in a supportive and engaging environment.
+
 
 No tutorials. No fluff. Just hands-on experience.
 
 ---
 
-## 🚀 Start Here
+<div align="center">
+
+  [![GitHub Issues](https://img.shields.io/github/issues/kc-clintone/dev-wengi?style=flat-square&color=3498db)](https://github.com/kc-clintone/dev-wengi/issues)
+  [![Pull Requests](https://img.shields.io/github/issues-pr/kc-clintone/dev-wengi?style=flat-square&color=2ecc71)](https://github.com/kc-clintone/dev-wengi/pulls)
+  [![Contributors](https://img.shields.io/github/contributors/kc-clintone/dev-wengi?style=flat-square&color=f39c12)](https://github.com/kc-clintone/dev-wengi/graphs/contributors)
+  [![License](https://img.shields.io/badge/license-MIT-blueviolet?style=flat-square)](LICENSE)
+
+</div>
+
+---
+
+## Start Here
 
 ### 1. Pick a Track
 
 Choose your battleground:
 
-* 👉 Frontend → `/tracks/frontend`
+* Frontend → `/tracks/frontend`
 
 ---
 
@@ -45,7 +57,7 @@ Each level gives you:
 * Real-world tasks
 * Starter code (when needed)
 
-👉 Your mission: **figure it out, break things, fix them, ship it**
+Your mission: **figure it out, break things, fix them, ship it**
 
 ---
 
@@ -71,7 +83,7 @@ Time to leave the sandbox:
 
 ---
 
-## 🧭 Choose Your Path
+## Choose Your Path
 
 **🟢 Beginner**
 Start with a track → follow levels → build confidence
@@ -84,7 +96,7 @@ Skip the warm-up → dive into projects → solve real problems
 
 ---
 
-## 🤝 Community
+## Community
 
 You're building, not struggling in silence.
 
@@ -96,7 +108,7 @@ You're building, not struggling in silence.
 
 ---
 
-## 🔥 Why Dev-Wengi?
+## Why Dev-Wengi?
 
 * Learn by **doing**, not watching
 * Work on **real codebases**, not toy projects
@@ -104,6 +116,6 @@ You're building, not struggling in silence.
 
 ---
 
-## ⚡ One Rule
+## One Rule
 
 > Don't just read. Build something. Break it. Fix it. Repeat.
