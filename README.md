@@ -80,7 +80,7 @@ Time to leave the sandbox:
 * Go to `/projects` and pick one, go through the README and understand what it needs
 * Or simply pick an issue from the `issues` tab for this repo
 * Contribute like it matters (because it does)
-* You can also contribute to the dev.wengi community website [![here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)]
+* You can also contribute to the dev.wengi community website ![here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)
 
 ---
 
