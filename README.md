@@ -33,9 +33,9 @@ No tutorials. No fluff. Just hands-on experience.
 
 ### 1. Pick a Track
 
-Choose your battleground:
+Choose your battleground, for example if you're learning:
 
-* Frontend → `/tracks/frontend`
+* Frontend → go to the folder `/tracks/frontend`
 
 ---
 
@@ -77,21 +77,25 @@ Progress isn't given — it's earned.
 
 Time to leave the sandbox:
 
-* Go to `/projects`
-* Pick an issue
+* Go to `/projects` and pick one, go through the README and understand what it needs
+* Or simply pick an issue from the `issues` tab for this repo
 * Contribute like it matters (because it does)
+* You can also contribute to the dev.wengi community website [![here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)]
 
 ---
 
 ## Choose Your Path
 
 **🟢 Beginner**
+
 Start with a track → follow levels → build confidence
 
 **🟡 Intermediate**
+
 Balance learning with real project contributions
 
 **🔴 Advanced**
+
 Skip the warm-up → dive into projects → solve real problems
 
 ---
@@ -100,7 +104,7 @@ Skip the warm-up → dive into projects → solve real problems
 
 You're building, not struggling in silence.
 
-* Ask questions in Discussions & on [Discord](https://discord.com)
+* Ask questions in Discussions, whatsApp & on [Discord](https://discord.com)
 * Help others when you can
 * Share what you learn
 
