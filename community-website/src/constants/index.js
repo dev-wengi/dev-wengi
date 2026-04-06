@@ -18,5 +18,5 @@ export const NavLinks = [
   {
     name: 'Contact',
     href: '/contact',
-  },
+  }
 ]  
