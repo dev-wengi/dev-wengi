@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Dev-Wengi Logo](../assets/logos/2.png)
+![Dev-Wengi Logo](../assets/logos/6.png)
 
 **Build together. Learn together. Grow together.**
 
