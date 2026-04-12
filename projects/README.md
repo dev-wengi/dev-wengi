@@ -1,4 +1,4 @@
-# 🛠️ Projects
+# Projects
 
 This is where theory ends.
 
@@ -6,7 +6,7 @@ Apply what you’ve learned by building real features, fixing real problems, and
 
 ---
 
-## 🚀 How to Start
+## How to Start
 
 1. **Pick a project**  
    Choose something that matches your current level
@@ -24,26 +24,26 @@ Apply what you’ve learned by building real features, fixing real problems, and
 
 ---
 
-## 🧭 Project Levels
+## Project Levels
 
-**🟢 Beginner**  
+**Beginner**  
 - Small features  
 - UI improvements  
 - Basic logic fixes  
 
-**🟡 Intermediate**  
+**Intermediate**  
 - New features  
 - API integration  
 - State management  
 
-**🔴 Advanced**  
+**Advanced**  
 - Architecture decisions  
 - Performance improvements  
 - Complex systems  
 
 ---
 
-## 🧱 How to Approach a Project
+## How to Approach a Project
 
 - Start simple → make it work  
 - Improve → make it better  
@@ -53,14 +53,14 @@ You’re not aiming for perfect. You’re aiming for **progress**.
 
 ---
 
-## 🔗 Suggested Starting Point
+## Suggested Starting Point
 
-👉 `/projects/todo-app`  
+`/projects/todo-app`  
 
 Your first real build. Keep it simple. Finish it.
 
 ---
 
-## ⚡ Rule
+## Rule
 
 > If you’re stuck reading… you should probably be coding.
