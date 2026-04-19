@@ -1,0 +1,43 @@
+name: First PR Labeler
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  label-first-pr:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if first PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.pull_request.user.login;
+
+            // Get all PRs by this user
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "closed",
+              per_page: 20
+            });
+
+            // Filter merged PRs by this author
+            const mergedPRs = prs.filter(pr => 
+              pr.user.login === author && pr.merged_at
+            );
+
+            if (mergedPRs.length === 1) {
+              core.info(`${author} just made their FIRST PR 🎉`);
+
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                labels: ["first-pr"]
+              });
+            } else {
+              core.info(`${author} has ${mergedPRs.length} merged PRs`);
+            }
