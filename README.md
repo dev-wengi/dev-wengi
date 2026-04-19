@@ -80,7 +80,7 @@ Time to leave the sandbox:
 * Go to `/projects` and pick one, go through the README and understand what it needs
 * Or simply pick an issue from the `issues` tab for this repo
 * Contribute like it matters (because it does)
-* You can also contribute to the dev.wengi community website ![here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)
+* You can also contribute to the dev.wengi community website [here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)
 
 ---
 
@@ -99,6 +99,28 @@ Balance learning with real project contributions
 Skip the warm-up → dive into projects → solve real problems
 
 ---
+
+## Contributing
+
+This isn’t a spectator sport.
+
+If you’re here, build something.
+
+### Start contributing:
+
+- Pick an issue → https://github.com/kc-clintone/dev-wengi/issues
+- Or explore `/projects` and improve something
+- Or progress through `/tracks` and submit your work
+
+Before opening a PR, read the guide:
+
+ [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+
+## Good First Issues
+
+New here? Start with beginner-friendly tasks:
+
+https://github.com/kc-clintone/dev-wengi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
 
 ## Community
 
