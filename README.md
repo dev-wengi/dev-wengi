@@ -118,9 +118,8 @@ Before opening a PR, read the guide:
 
 ## Good First Issues
 
-New here? Start with beginner-friendly tasks:
-
-https://github.com/kc-clintone/dev-wengi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+New here? Start with beginner-friendly tasks here: [good first issue](
+https://github.com/kc-clintone/dev-wengi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 ## Community
 
