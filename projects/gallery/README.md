@@ -1,222 +1,105 @@
 # Image Gallery with Lightbox
 
-## Project Overview
+A simple, beginner-friendly project for building an interactive image gallery using HTML, CSS, and JavaScript.
 
-In this project, you’ll build an **interactive image gallery** where users can click on any image to view it in a fullscreen overlay (lightbox).
+## Features
 
-This is a common feature in modern websites—portfolios, e-commerce stores, and social platforms all use it. You’ll learn how to combine layout techniques with interactivity to create a polished user experience.
+* Responsive image grid layout
+* Fullscreen lightbox view on click
+* Next and previous navigation controls
+* Keyboard support (Escape key and arrow keys)
 
----
+## Getting Started
 
-## The Problem
+Clone the repository and open the project locally:
 
-Displaying images in a grid is easy—but creating a **smooth, interactive viewing experience** is where things get interesting.
+```bash
+git clone <repo-url>
+cd image-gallery-lightbox
+```
 
-This project solves:
+Then open `index.html` in your browser.
 
-* How to display multiple images cleanly
-* How to focus attention on a selected image
-* How to handle user interactions (clicks, keyboard, navigation)
+No build tools or dependencies are required.
 
-You are building something that answers:
+## Project Structure
 
-> “How can users view images in a more immersive and intuitive way?”
+```
+index.html
+styles.css
+script.js
+images/
+```
 
----
+## Contribution Goals
 
-## What You’ll Build
+This project is intentionally minimal and designed for learning and experimentation. Contributions are encouraged.
 
-An image gallery with a lightbox overlay.
+You can help improve the project by:
 
-### Core Features
+* Enhancing the user interface and user experience
+* Adding animations or transitions
+* Improving accessibility
+* Optimizing performance
+* Introducing new features
 
-* A responsive **grid of images**
-* Click an image → opens fullscreen overlay
-* Overlay includes:
+## Skills You Will Practice
 
-  * Enlarged image
-  * Close button
-  * Next / Previous navigation buttons
-
----
-
-## Tech Stack
-
-### 1. HTML
-
-* Image grid structure
-* Lightbox container (hidden by default)
-* Navigation buttons (next, prev, close)
-
-### 2. CSS
-
-* Grid or Flexbox layout for gallery
-* Overlay styling using `position: fixed`
-* Centering images
-* Transitions/animations (optional)
-
-### 3. JavaScript
-
-* Handling click events
-* Updating the lightbox content dynamically
-* Tracking current image index
-* Keyboard event handling
-
----
-
-## Key Concepts You’ll Practice
-
-* CSS Grid / Flexbox for layouts
-* Positioning (`fixed`, `absolute`, `z-index`)
-* Event listeners (`click`, `keydown`)
 * DOM manipulation
-* Managing UI state (current image index)
+* Event handling
+* CSS layout techniques (Grid and Flexbox)
+* UI state management
+
+## Contribution Ideas (GitHub Issues)
+
+These suggested issues are intended to help contributors get started and keep the project active.
+
+### Beginner
+
+**1. Add Image Captions**
+Display a caption for each image inside the lightbox.
+
+Tasks:
+
+* Add a `data-caption` attribute to images
+* Render the caption in the lightbox
+
+**2. Improve Button Styling**
+Enhance the appearance of navigation and close buttons.
+
+**3. Add Hover Overlay Effect**
+Display an overlay or icon when hovering over gallery images.
 
 ---
 
-## Suggested Structure
+### Intermediate
 
-### HTML (Basic Idea)
+**4. Add Fade Animation**
+Animate lightbox opening, closing, and image transitions.
 
-```html id="g1a2b3"
-<div class="gallery">
-  <img src="img1.jpg" alt="Image 1">
-  <img src="img2.jpg" alt="Image 2">
-  <img src="img3.jpg" alt="Image 3">
-</div>
+**5. Prevent Background Scroll**
+Disable page scrolling when the lightbox is open.
 
-<div class="lightbox hidden">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" src="">
-  <button class="prev">⟵</button>
-  <button class="next">⟶</button>
-</div>
-```
+**6. Add Thumbnail Navigation**
+Display preview thumbnails inside the lightbox.
 
 ---
 
-### CSS Concepts to Use
+### Advanced
 
-* Grid layout:
+**7. Add Swipe Support (Mobile)**
+Enable swipe gestures for navigating between images on mobile devices.
 
-```css id="c4d5e6"
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-}
-```
+**8. Implement Lazy Loading**
+Improve performance using the `loading="lazy"` attribute.
 
-* Lightbox overlay:
+**9. Modularize JavaScript**
+Refactor the code into reusable functions or modules.
 
-```css id="f7g8h9"
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-```
+**10. Improve Accessibility**
 
----
+Tasks:
 
-### JavaScript Responsibilities
-
-* Detect which image was clicked
-* Store the current image index
-* Show the lightbox
-* Update image source dynamically
-* Navigate between images
-* Close the lightbox
-
-Example logic:
-
-```javascript id="j1k2l3"
-let currentIndex = 0;
-
-images.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    currentIndex = index;
-    showLightbox();
-  });
-});
-```
-
----
-
-## Keyboard Controls (Optional)
-
-Enhance usability by supporting:
-
-* `Escape` → Close lightbox
-* `ArrowRight` → Next image
-* `ArrowLeft` → Previous image
-
----
-
-## Common Challenges
-
-* Forgetting to track the current image index
-* Lightbox not covering the full screen (z-index issues)
-* Navigation breaking at first/last image
-* Not removing event listeners properly
-* Layout breaking on small screens
-
----
-
-## Stretch Goals
-
-Once the basics work, upgrade your project:
-
-### UI/UX Improvements
-
-* Add image captions
-* Smooth fade or zoom animations
-* Hover effects on gallery images
-
-### Mobile Experience
-
-* Swipe gestures (left/right navigation)
-* Larger touch-friendly buttons
-
-### Performance
-
-* Lazy load images (`loading="lazy"`)
-* Optimize image sizes
-
----
-
-## Final Goal
-
-You should end up with:
-
-* A responsive image grid
-* A smooth, functional lightbox
-* Clean navigation experience (buttons + keyboard)
-
-This project is a great step toward building:
-
-* Portfolio websites
-* Media-heavy apps
-* Professional UI components
-
----
-
-## Tip
-
-Start simple:
-
-1. Show images in a grid
-2. Make clicking open the lightbox
-3. Add navigation last
-
-Trying to do everything at once will slow you down.
-
----
-
-Happy building
+* Add appropriate ARIA roles
+* Enhance keyboard navigation
+* Implement focus trapping
