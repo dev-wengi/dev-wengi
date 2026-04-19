@@ -14,8 +14,8 @@ A simple, beginner-friendly project for building an interactive image gallery us
 Clone the repository and open the project locally:
 
 ```bash
-git clone <repo-url>
-cd image-gallery-lightbox
+git clone https://github.com/kc-clintone/dev-wengi.git
+cd dev-wengi/projects/gallery
 ```
 
 Then open `index.html` in your browser.
