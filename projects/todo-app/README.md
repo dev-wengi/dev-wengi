@@ -1,101 +1,64 @@
-# Todo App
+# Todo Manager App
 
-Build a simple Todo application from scratch.
+A fully interactive Todo application built with **vanilla JavaScript**.
 
-This is your first step into creating interactive web applications — no tutorials, just you and the problem.
-
----
-
-## Goal
-
-Learn the core fundamentals of frontend development by building a fully working Todo app.
-
-By completing this project, you should understand:
-
-* How to handle user input
-* How to dynamically update the UI
-* How to manage simple application state
+This project goes beyond a basic todo list — it simulates a real task management system.
 
 ---
 
-## Requirements
+## Features
 
-Your application should allow users to:
-
-* Add a new todo
-* Mark a todo as completed
-* Delete a todo
-* View all todos
-
----
-
-## Data Persistence (Optional but Recommended)
-
-* Store todos in browser storage using `localStorage`
-* Ensure todos persist after page refresh
+- Full CRUD functionality
+- Inline editing
+- Filter tasks (All / Active / Completed)
+- Persistent storage (localStorage)
+- Clean, minimal UI
 
 ---
 
-## UI Expectations
+## Getting Started
 
-* Clean, minimal layout
-* Each todo item clearly readable
-* Completed todos should be visually distinct (for example, strikethrough text or faded styling)
+git clone <repo-url>  
+cd todo-app  
+open index.html  
 
----
-
-## Constraints
-
-* No frameworks (React, Vue, Angular, etc.)
-* No external libraries
-* Focus on core JavaScript and DOM manipulation
-* Keep the implementation simple and readable
+No setup required.
 
 ---
 
-## Bonus Challenges
+## Structure
 
-If you finish early or want more practice:
-
-* Edit existing todos
-* Add filters (All / Active / Completed)
-* Add due dates or priorities
-* Improve visual design and styling
+index.html  
+styles.css  
+script.js  
 
 ---
 
-## Hints (If You Get Stuck)
+## What You Will Learn
 
-* Your todos can be stored in an array in memory
-* Every user action should update that array
-* After each update, re-render the UI
-* Think in terms of: input → state → UI
-
----
-
-## Submission
-
-1. Fork the repository
-2. Create a new branch
-3. Implement your solution
-4. Open a Pull Request
-
-Include:
-
-* A short description of your implementation
-* Screenshots or a demo (if available)
+- State management in JavaScript
+- DOM rendering patterns
+- CRUD operations
+- UI filtering logic
+- Persistent storage
 
 ---
 
-## Issues
+## Core Concept
 
-If you're looking for a place to start, check:
+> UI = function(state)
 
-* `good-first-issue`
-* `level:beginner`
+Every change updates the state → then re-renders the UI.
 
 ---
 
-## Rule
+## Contributing
 
-> Keep it simple. Make it work first. Then improve it.
+Check:
+
+- good-first-issue
+- feature requests
+- bug fixes
+
+Read contributing guide before PR:
+👉 [guide](../../.github/CONTRIBUTING.md)
