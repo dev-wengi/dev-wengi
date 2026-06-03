@@ -1,4 +1,3 @@
-30-nights-of-building/
 │
 ├── 01-easy/
 │   ├── habit-tracker/
