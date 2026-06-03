@@ -110,7 +110,7 @@ Lead projects. Mentor others. Solve meaningful problems.
 
 ## Contributing to the Website
 
-This website is built by the community, for the community. Your contributions are welcome. Check out our ![figma designs](https://www.figma.com/design/Alo0GDpV67rTRzFc8s79B7/dev.wengi?node-id=0-1&t=ZDaJPtgxZeQMyu9K-1) to see what you can help implement.
+This website is built by the community, for the community. Your contributions are welcome. Check out our ![figma designs](https://www.figma.com/design/Alo0GDpV67rTRzFc8s79B7/dev.wengi?node-id=0-1&t=Oyag5g1gEeuRF17Q-1) to see what you can help implement.
 
 ### Ways to Contribute:
 
