@@ -27,7 +27,8 @@ jobs:
             const author = context.payload.pull_request.user.login;
 
             // Get all merged PRs by this user
-            const mergedPRs = await github.paginate(
+            const mergedPRs = [];
+            await github.paginate(
               github.rest.pulls.list,
               {
                 owner: context.repo.owner,
@@ -35,8 +36,15 @@ jobs:
                 state: "closed",
                 creator: author,
                 per_page: 100
+              },
+              (response) => {
+                response.data.forEach(pr => {
+                  if (pr.merged_at) {
+                    mergedPRs.push(pr);
+                  }
+                });
               }
-            ).then(prs => prs.filter(pr => pr.merged_at));
+            );
 
             if (mergedPRs.length === 1) {
               core.info(`${author} just made their FIRST PR 🎉`);
@@ -155,7 +163,7 @@ jobs:
             ==================
             • Explore challenges: https://github.com/dev-wengi/dev-wengi/tree/main/challenges
             • Browse projects: https://github.com/dev-wengi/dev-wengi/tree/main/projects
-            
+
             Pick your track:
             - Frontend: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/frontend
             - Backend: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/backend
