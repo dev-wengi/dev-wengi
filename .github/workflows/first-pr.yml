@@ -10,27 +10,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check if first PR
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check if first PR and update contributors
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
             const author = context.payload.pull_request.user.login;
 
-            // Get all closed PRs by this user and count merged ones.
+            // Get all merged PRs by this user
             const mergedPRs = await github.paginate(
               github.rest.pulls.list,
               {
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 state: "closed",
+                creator: author,
                 per_page: 100
-              },
-              page => page.filter(pr => pr.user.login === author && pr.merged_at)
-            );
+              }
+            ).then(prs => prs.filter(pr => pr.merged_at));
 
             if (mergedPRs.length === 1) {
               core.info(`${author} just made their FIRST PR 🎉`);
 
+              // Add label
               await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -38,6 +45,7 @@ jobs:
                 labels: ["first-pr"]
               });
 
+              // Add comment
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -49,6 +57,37 @@ jobs:
               You've officially joined the **First PR Club**.
               Keep building.`
               });
+
+              // Update CONTRIBUTORS.md
+              try {
+                let contributorsFile = fs.readFileSync('CONTRIBUTORS.md', 'utf8');
+                
+                // Check if contributor already exists in the file
+                if (contributorsFile.includes(`@${author}`)) {
+                  core.info(`${author} already listed in CONTRIBUTORS.md`);
+                  return;
+                }
+
+                // Add to First PR Club section
+                const firstPRSectionRegex = /(## 🟢 First PR Club\s+These legends shipped their first contribution:\s+)(- @[^\n]+)/;
+                contributorsFile = contributorsFile.replace(
+                  firstPRSectionRegex,
+                  `$1- @${author}\n$2`
+                );
+
+                fs.writeFileSync('CONTRIBUTORS.md', contributorsFile);
+                core.info(`Added @${author} to CONTRIBUTORS.md`);
+              } catch (error) {
+                core.warning(`Could not update CONTRIBUTORS.md: ${error.message}`);
+              }
             } else {
               core.info(`${author} has ${mergedPRs.length} merged PRs`);
             }
+
+      - name: Commit and push changes
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CONTRIBUTORS.md
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: add @${{ github.event.pull_request.user.login }} to CONTRIBUTORS.md 🎉" && git push)
