@@ -32,6 +32,14 @@ We’re excited to have you here. Whether you're fixing a bug, adding a feature,
 * Follow existing code style and structure.
 * Add or update documentation where necessary.
 
+### What to contribute
+
+Contributions can include:
+- `projects/` — feature work, bug fixes, and app improvements
+- `challenges/` — new project prompts, challenge guides, and learning content
+- `docs/` — docs, tutorials, and repository guidance
+- `community-website/` — website UI, content, and community hub improvements
+
 Commit your work with a meaningful message:
 
 ```bash

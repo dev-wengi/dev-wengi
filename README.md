@@ -78,9 +78,11 @@ Progress isn't given — it's earned.
 Time to leave the sandbox:
 
 * Go to `/projects` and pick one, go through the README and understand what it needs
+* Or go to `/challenges` and choose a challenge to build or improve
+* Or help improve `/docs` with better guidance, examples, and resources
+* Or contribute to the dev.wengi community website in `/community-website`
 * Or simply pick an issue from the `issues` tab for this repo
 * Contribute like it matters (because it does)
-* You can also contribute to the dev.wengi community website [here](https://github.com/kc-clintone/dev-wengi/tree/main/community-website)
 
 ---
 
@@ -109,6 +111,9 @@ If you’re here, build something.
 ### Start contributing:
 
 - Pick an issue → https://github.com/kc-clintone/dev-wengi/issues
+- Improve docs in `/docs`
+- Help shape challenges in `/challenges`
+- Enhance the community website in `/community-website`
 - Or explore `/projects` and improve something
 - Or progress through `/tracks` and submit your work
 

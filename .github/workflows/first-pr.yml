@@ -16,17 +16,16 @@ jobs:
           script: |
             const author = context.payload.pull_request.user.login;
 
-            // Get all PRs by this user
-            const { data: prs } = await github.rest.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: "closed",
-              per_page: 20
-            });
-
-            // Filter merged PRs by this author
-            const mergedPRs = prs.filter(pr => 
-              pr.user.login === author && pr.merged_at
+            // Get all closed PRs by this user and count merged ones.
+            const mergedPRs = await github.paginate(
+              github.rest.pulls.list,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "closed",
+                per_page: 100
+              },
+              page => page.filter(pr => pr.user.login === author && pr.merged_at)
             );
 
             if (mergedPRs.length === 1) {
