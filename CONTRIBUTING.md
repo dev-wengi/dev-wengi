@@ -28,13 +28,14 @@ We’re excited to have you here. Whether you're fixing a bug, adding a feature,
 
 ## Making Changes
 
-* Keep changes focused and minimal (one feature/fix per PR).
-* Follow existing code style and structure.
-* Add or update documentation where necessary.
+- Keep changes focused and minimal (one feature/fix per PR).
+- Follow existing code style and structure.
+- Add or update documentation where necessary.
 
 ### What to contribute
 
 Contributions can include:
+
 - `projects/` — feature work, bug fixes, and app improvements
 - `challenges/` — new project prompts, challenge guides, and learning content
 - `docs/` — docs, tutorials, and repository guidance
@@ -58,28 +59,28 @@ git push origin feature/short-description
 
 1. Open a Pull Request against the `main` branch.
 2. Clearly describe:
+   - What you changed
+   - Why it’s needed
+   - Any relevant context or screenshots
 
-   * What you changed
-   * Why it’s needed
-   * Any relevant context or screenshots
 3. Link related issues if applicable (e.g. `Closes #12`).
 
 ---
 
 ## 👀 Review Process
 
-* Maintainers will review your PR and may request changes.
-* Don’t take feedback personally — it’s about improving the project.
-* Once approved, your contribution will be merged.
+- Maintainers will review your PR and may request changes.
+- Don’t take feedback personally — it’s about improving the project.
+- Once approved, your contribution will be merged.
 
 ---
 
 ## Community Guidelines
 
-* Be respectful and constructive.
-* Assume good intent.
-* Help others where you can.
-* Read more here
+- Be respectful and constructive.
+- Assume good intent.
+- Help others where you can.
+- Read more here
 
 ---
 
@@ -87,16 +88,16 @@ git push origin feature/short-description
 
 Found a bug or have a suggestion?
 
-* Check if it already exists in the issue tracker.
-* If not, open a new issue with clear details and steps to reproduce.
+- Check if it already exists in the issue tracker.
+- If not, open a new issue with clear details and steps to reproduce.
 
 ---
 
 ## Tips for Contributors
 
-* Small PRs get merged faster.
-* Clear descriptions save everyone time.
-* When in doubt, ask!
+- Small PRs get merged faster.
+- Clear descriptions save everyone time.
+- When in doubt, ask!
 
 ---
 
