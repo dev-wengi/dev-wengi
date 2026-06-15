@@ -3,6 +3,7 @@
 Briefly describe what this PR does.
 
 Fixes #(issue number)
+Check the box you are solving for by adding x inside the square brackets: `[x]`
 
 ---
 
