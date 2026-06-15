@@ -85,15 +85,15 @@ Time to leave the sandbox:
 
 ## Choose Your Path
 
-**🟢 Beginner**
+**Beginner**
 
 Start with a track → follow levels → build confidence
 
-**🟡 Intermediate**
+**Intermediate**
 
 Balance learning with real project contributions
 
-**🔴 Advanced**
+**Advanced**
 
 Skip the warm-up → dive into projects → solve real problems
 
