@@ -62,11 +62,11 @@ Your mission: **figure it out, break things, fix them, ship it**
 
 When you're done:
 
-- Submit your work (PR)
+- Submit your work Pull Request (PR)
 - Get feedback
 - Unlock the next level
 
-Progress isn't given — it's earned.
+Progress isn't given, it's earned.
 
 ---
 
