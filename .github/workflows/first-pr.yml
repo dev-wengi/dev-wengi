@@ -145,7 +145,7 @@ jobs:
             }
 
       - name: Send Welcome Email
-        if: success() && steps.get-email.outputs.email
+        if: success() && steps.get-email.outputs.email && secrets.EMAIL_SERVER
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.EMAIL_SERVER }}
