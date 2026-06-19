@@ -1,132 +1,190 @@
 # Dev-Wengi
 
-<div align="center">
-  
-  ![Dev-Wengi Logo](assets/logos/2.png)
-</div>
-
 **Learn to code by building real projects, with real people.**
 
-**dev.wengi** is a developer-focused community designed to inspire, support, and empower individuals at every stage of their tech journey.
-The community simplifies the process of learning and breaking into tech by providing curated resources, practical guidance, and opportunities to work on real-world problems.
-More than just a learning space, **dev.wengi** fosters collaboration and connection, bringing together individuals who are eager to build, explore, and grow together in a supportive and engaging environment.
+**dev.wengi** is a developer-focused community designed to inspire, support, and empower individuals at every stage of their tech journey. The community simplifies the process of learning and breaking into tech by providing curated resources, practical guidance, and opportunities to work on real-world problems.
 
 No tutorials. No fluff. Just hands-on experience.
 
 ---
 
-<div align="center">
+## What Is This Repository?
 
-[![GitHub Issues](https://img.shields.io/github/issues/kc-clintone/dev-wengi?style=flat-square&color=3498db)](https://github.com/kc-clintone/dev-wengi/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/kc-clintone/dev-wengi?style=flat-square&color=2ecc71)](https://github.com/kc-clintone/dev-wengi/pulls)
-[![Contributors](https://img.shields.io/github/contributors/kc-clintone/dev-wengi?style=flat-square&color=f39c12)](https://github.com/kc-clintone/dev-wengi/graphs/contributors)
-[![License](https://img.shields.io/badge/license-MIT-blueviolet?style=flat-square)](LICENSE)
+This is the main dev-wengi repository. It contains everything you need to start learning, building, and contributing:
 
-</div>
-
----
-
-## Start Here
-
-### 1. Pick a Track
-
-Choose your battleground, for example if you're learning:
-
-- Frontend → go to the folder `/tracks/frontend`
+- `/tracks` - Structured learning paths for different tech stacks
+- `/challenges` - 30-day coding challenges across difficulty levels
+- `/projects` - Real-world projects you can contribute to
+- `/community-website` - The dev.wengi community website
+- `/docs` - Documentation and guides
 
 ---
 
-### 2. Start at Level 0
+## Repository Structure
 
-Every track is structured into levels.
+### Tracks (`/tracks`)
 
-- Begin at **Level 0**
-- Follow the tasks step by step
-- Resist the urge to skip ahead (future you will regret it)
+Structured learning paths that guide you from beginner to advanced. Each track is divided into levels with clear tasks and goals.
+
+- **Frontend** - HTML, CSS, JavaScript, React, and modern frontend tools
+- **Backend** - Server-side development, APIs, databases
+- **DevOps** - Deployment, CI/CD, infrastructure
+
+**How to use:** Pick a track, start at Level 0, and work through each task. Submit your work as a Pull Request to unlock the next level.
+
+### Challenges (`/challenges/30-day-challenges`)
+
+50 coding challenges organized by difficulty:
+
+- **01-easy** - 10 beginner-friendly projects
+- **02-intermediate** - 10 intermediate-level projects
+- **03-advanced** - 10 advanced projects involving AI and complex systems
+- **04-hard** - 10 hard projects involving distributed systems and infrastructure
+- **05-nightmare** - 10 extremely challenging projects for experienced developers
+
+Each challenge has a detailed README with project requirements, expected features, tech stack recommendations, and success criteria.
+
+**How to use:** Pick a challenge that matches your skill level, read the README, and build it. You can work on challenges independently or as part of the 30-day challenge program.
+
+### Projects (`/projects`)
+
+17 real-world projects that you can clone, contribute to, or use as inspiration. Each project has its own detailed README with setup instructions and contribution guidelines.
+
+**Available projects:**
+- auth-api - JWT-based authentication API
+- auth-app - Frontend authentication app
+- chat-app - Real-time chat frontend
+- chat-app-backend - WebSocket chat server
+- dashboard - Admin dashboard with metrics and charts
+- file-upload-service - File upload and storage API
+- gallery - Image gallery with lightbox
+- github-explorer - GitHub API integration app
+- job-queue - Background job processing system
+- kanban-board - Drag-and-drop task board
+- notes-app - Note-taking application
+- quiz-app - Interactive quiz application
+- rate-limiter - API rate limiting middleware
+- todo-api - RESTful todo API
+- todo-app - Todo management frontend
+- url-shortener - URL shortening service
+- wather-app - Weather information app
 
 ---
 
-### 3. Complete Tasks
+## Git Submodules
 
-Each level gives you:
+The projects in `/projects` are managed as **git submodules**. This means each project is a separate repository that can be cloned independently.
 
-- Clear goals
-- Real-world tasks
-- Starter code (when needed)
+### Cloning This Repository
 
-Your mission: **figure it out, break things, fix them, ship it**
+To clone this repository along with all project submodules:
+
+```bash
+git clone --recursive git@github.com:dev-wengi/dev-wengi.git
+```
+
+### Cloning Individual Projects
+
+You can also clone any project directly without cloning the entire repository:
+
+```bash
+git clone git@github.com:dev-wengi/auth-api.git
+git clone git@github.com:dev-wengi/todo-app.git
+# etc.
+```
+
+### Updating Submodules
+
+If you already have the repository cloned and want to update all submodules:
+
+```bash
+git submodule update --init --recursive
+```
+
+To update a specific submodule:
+
+```bash
+cd projects/auth-api && git pull
+cd ../..
+git add projects/auth-api
+git commit -m "Update auth-api submodule"
+```
 
 ---
 
-### 4. Level Up
+## Getting Started
 
-When you're done:
+### For Learners
 
-- Submit your work Pull Request (PR)
-- Get feedback
-- Unlock the next level
+1. **Choose your path:**
+   - New to coding? Start with `/tracks/frontend` or `/tracks/backend` at Level 0
+   - Have some experience? Jump to `/challenges` and pick a challenge
+   - Want to contribute? Browse `/projects` for open issues
 
-Progress isn't given, it's earned.
+2. **Follow the structure:**
+   - Tracks are sequential - complete Level 0 before moving to Level 1
+   - Challenges are independent - pick any that interest you
+   - Projects are open for contributions - find an issue and start coding
+
+3. **Submit your work:**
+   - Fork the repository
+   - Create a new branch for your work
+   - Submit a Pull Request with your changes
+   - Get feedback and iterate
+
+### For Contributors
+
+1. **Find something to work on:**
+   - Check the [Issues tab](https://github.com/kc-clintone/dev-wengi/issues) for open issues
+   - Look for `good-first-issue` labels if you're new
+   - Browse `/projects` for projects that need help
+
+2. **Read the guidelines:**
+   - [CONTRIBUTING.md](.github/CONTUTING.md) - Contribution guidelines
+   - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Community standards
+
+3. **Make your contribution:**
+   - Fork and clone the repository
+   - Create a feature branch
+   - Make your changes
+   - Submit a Pull Request with a clear description
 
 ---
 
-### 5. Build Real Stuff
-
-Time to leave the sandbox:
-
-- Go to `/projects` and pick one, go through the README and understand what it needs
-- Or go to `/challenges` and choose a challenge to build or improve
-- Or help improve `/docs` with better guidance, examples, and resources
-- Or contribute to the dev.wengi community website in `/community-website`
-- Or simply pick an issue from the `issues` tab for this repo
-- Contribute like it matters (because it does)
-
----
-
-## Choose Your Path
+## Project Levels
 
 **Beginner**
-
-Start with a track → follow levels → build confidence
+- Small features
+- UI improvements
+- Basic logic fixes
 
 **Intermediate**
-
-Balance learning with real project contributions
+- New features
+- API integration
+- State management
 
 **Advanced**
-
-Skip the warm-up → dive into projects → solve real problems
+- Architecture decisions
+- Performance improvements
+- Complex systems
 
 ---
 
-## Contributing
+## How to Approach a Project
 
-This isn’t a spectator sport.
+- Start simple, make it work
+- Improve, make it better
+- Refactor, make it clean
 
-If you’re here, build something.
+You're not aiming for perfect. You're aiming for progress.
 
-### Start contributing:
-
-- Pick an issue → https://github.com/kc-clintone/dev-wengi/issues
-- Improve docs in `/docs`
-- Help shape challenges in `/challenges`
-- Enhance the community website in `/community-website`
-- Or explore `/projects` and improve something
-- Or progress through `/tracks` and submit your work
-
-Before opening a PR, read the guide:
-
-[CONTRIBUTING.md](.github/CONTRIBUTING.md)
-
-## Good First Issues
-
-New here? Start with beginner-friendly tasks here: [good first issue](https://github.com/kc-clintone/dev-wengi/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+---
 
 ## Community
 
 You're building, not struggling in silence.
 
-- Ask questions in Discussions, whatsApp & on [Discord](https://discord.com)
+- Ask questions in Discussions, WhatsApp, and on [Discord](https://discord.com)
 - Help others when you can
 - Share what you learn
 
