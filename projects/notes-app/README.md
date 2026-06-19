@@ -1,56 +1,43 @@
-# 📝 Notes App
+# Notes App
 
-Build a simple notes application where users can create, edit, and delete notes.
+## Project Overview
 
----
+Build a notes application that allows users to create, edit, delete, and organize notes in a clean, intuitive interface. This project focuses on providing a fast and reliable note-taking experience with local persistence.
 
-## 🎯 Goal
+## Core Features
 
-Learn how to manage state and persist data in the browser.
+- Create new notes with titles and content
+- Edit and delete existing notes
+- Persist notes locally so they remain after refresh
+- Search or filter notes by title or content
+- Optional: Pin important notes to the top
+- Optional: Organize notes with tags or folders
+- Optional: Rich text editing with formatting
+- Clean and responsive design
 
----
+## Technical Recommendations
 
-## 🧩 Requirements
+- Framework: React, Vue, or Svelte with a notes-focused layout
+- Storage: LocalStorage or IndexedDB for client-side persistence
+- State Management: React Context, Pinia, or Svelte stores
+- Search: Client-side filtering with debounced search input
+- Styling: Tailwind CSS or CSS Modules for clean, card-based layouts
+- Editor: Simple textarea or a lightweight rich text editor
+- Icons: SVG icons for note actions and navigation
 
-- Add a new note
-- Edit an existing note
-- Delete a note
-- Display all notes on the screen
+## Key Components
 
----
+- NotesList - Main container displaying all notes
+- NoteCard - Individual note preview component
+- NoteEditor - Full note editing interface
+- SearchBar - Search input for filtering notes
+- NoteTabs - Sidebar for note organization (optional)
+- TagFilter - Filter notes by tags (optional)
 
-## 💾 Persistence
+## Success Criteria
 
-- Save notes in **localStorage**
-- Notes should still exist after page refresh
-
----
-
-## 🎨 UI Expectations
-
-- Clean and simple layout
-- Each note should be clearly separated
-- Include basic styling (no default browser UI)
-
----
-
-## 🚫 Constraints
-
-- No external state libraries
-- No backend
-
----
-
-## ⭐ Bonus Challenges
-
-- Add search functionality
-- Add categories/tags
-- Add timestamps (created/updated)
-
----
-
-## 📦 Submission
-
-- Push your code to a branch
-- Open a Pull Request
-- Include screenshots or a short demo if any
+- Users can manage notes without confusion
+- Note data is saved reliably between sessions
+- Search functionality returns relevant results quickly
+- The app feels complete and ready for regular use
+- The interface is clean and responsive across devices

@@ -1,64 +1,45 @@
-# Todo Manager App
+# Todo App
 
-A fully interactive Todo application built with **vanilla JavaScript**.
+## Project Overview
 
-This project goes beyond a basic todo list — it simulates a real task management system.
+Build a todo application that allows users to manage tasks with a clean, intuitive interface. This frontend-focused project demonstrates CRUD operations, state management, and local data persistence.
 
----
+## Core Features
 
-## Features
+- Add new todo items with title and optional description
+- Mark todos as complete or incomplete
+- Edit existing todo items
+- Delete todo items
+- Filter todos by status (all, active, completed)
+- Persist todos locally so they remain after refresh
+- Optional: Set due dates and priorities
+- Optional: Organize todos with categories or tags
+- Clean and responsive design
 
-- Full CRUD functionality
-- Inline editing
-- Filter tasks (All / Active / Completed)
-- Persistent storage (localStorage)
-- Clean, minimal UI
+## Technical Recommendations
 
----
+- Framework: React, Vue, or Svelte with a todo-focused layout
+- Storage: LocalStorage or IndexedDB for client-side persistence
+- State Management: React Context, Pinia, or Svelte stores
+- Styling: Tailwind CSS or CSS Modules for clean, card-based layouts
+- Forms: React Hook Form, VeeValidate, or similar for form handling
+- Validation: Zod or Yup for input validation
+- Icons: SVG icons for todo actions and filters
+- Animations: CSS transitions for smooth state changes
 
-## Getting Started
+## Key Components
 
-git clone <repo-url>  
-cd todo-app  
-open index.html  
+- TodoInput - Form for adding new todos
+- TodoList - List of all todo items
+- TodoItem - Individual todo with actions (edit, delete, toggle)
+- TodoFilter - Filter buttons for all/active/completed
+- TodoStats - Summary of todo counts and completion rate
+- EmptyState - Placeholder when no todos exist
 
-No setup required.
+## Success Criteria
 
----
-
-## Structure
-
-index.html  
-styles.css  
-script.js  
-
----
-
-## What You Will Learn
-
-- State management in JavaScript
-- DOM rendering patterns
-- CRUD operations
-- UI filtering logic
-- Persistent storage
-
----
-
-## Core Concept
-
-> UI = function(state)
-
-Every change updates the state → then re-renders the UI.
-
----
-
-## Contributing
-
-Check:
-
-- good-first-issue
-- feature requests
-- bug fixes
-
-Read contributing guide before PR:
-👉 [guide](../../.github/CONTRIBUTING.md)
+- Users can add, edit, complete, and delete todos easily
+- Todo data persists reliably between sessions
+- Filtering works smoothly and updates the view
+- The app feels complete and ready for regular use
+- The interface is clean and responsive across devices

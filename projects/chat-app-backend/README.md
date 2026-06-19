@@ -1,58 +1,56 @@
-# 💬 Chat Backend
+# Chat App Backend
 
-Build a real-time chat server.
+## Project Overview
 
----
+Build a backend service for a real-time chat application that handles WebSocket connections, message broadcasting, and chat room management. This server powers the Chat App with reliable real-time messaging infrastructure.
 
-## 🎯 Goal
+## Core Features
 
-Learn how real-time systems work.
+- WebSocket server for real-time bidirectional communication
+- Chat room creation and management
+- Message broadcasting to room participants
+- User presence tracking (join/leave events)
+- Message persistence and history retrieval
+- Typing indicator broadcasting
+- Optional: Direct messaging between users
+- Optional: Message read receipts
 
----
+## Technical Recommendations
 
-## 🧩 Requirements
+- Runtime: Node.js with Express and Socket.IO
+- Language: TypeScript for type safety
+- Real-time: Socket.IO for WebSocket communication with fallbacks
+- Database: PostgreSQL, MongoDB, or Redis for message storage
+- Caching: Redis for session management and presence data
+- Validation: Zod or Joi for message validation
+- Authentication: JWT middleware for socket connection auth
+- Testing: Jest or Vitest for unit and integration tests
+- Documentation: OpenAPI/Swagger for REST endpoints
 
-- Multiple users connect
-- Send and receive messages
-- Broadcast messages
+## API Endpoints
 
----
+- WS /socket.io - WebSocket connection endpoint
+- GET /api/rooms - List available chat rooms
+- POST /api/rooms - Create a new chat room
+- GET /api/rooms/:id/messages - Get message history for a room
+- POST /api/rooms/:id/messages - Send a message to a room
+- GET /api/users/online - Get list of online users
 
-## ⚙️ Tech
+## Socket Events
 
-- WebSockets (recommended)
+- connection - New client connection
+- join_room - User joins a chat room
+- leave_room - User leaves a chat room
+- send_message - Broadcast message to room
+- typing_start - User started typing
+- typing_stop - User stopped typing
+- user_online - User came online
+- user_offline - User went offline
 
----
+## Success Criteria
 
-## 💡 Behavior
-
-- Messages should appear instantly
-- Handle multiple connections
-
----
-
-## ⚠️ Challenges
-
-- Managing connections
-- Handling disconnects
-
----
-
-## 🚫 Constraints
-
-- No polling-only solutions (try realtime)
-
----
-
-## ⭐ Bonus Challenges
-
-- Rooms/channels
-- Private messaging
-- Message history
-
----
-
-## 📦 Submission
-
-- PR with working chat server
-- Include testing instructions
+- WebSocket connections are stable and handle reconnections
+- Messages are broadcast to all room participants instantly
+- User presence is tracked accurately
+- Message history is persisted and retrievable
+- The server handles multiple concurrent connections efficiently

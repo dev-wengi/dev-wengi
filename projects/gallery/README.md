@@ -1,105 +1,44 @@
-# Image Gallery with Lightbox
+# Gallery
 
-A simple, beginner-friendly project for building an interactive image gallery using HTML, CSS, and JavaScript.
+## Project Overview
 
-## Features
+Build an image gallery application that displays photos in a beautiful, responsive grid layout with lightbox viewing, filtering, and categorization. This project focuses on creating an engaging visual experience for browsing image collections.
 
-* Responsive image grid layout
-* Fullscreen lightbox view on click
-* Next and previous navigation controls
-* Keyboard support (Escape key and arrow keys)
+## Core Features
 
-## Getting Started
+- Responsive image grid layout with masonry or uniform design
+- Lightbox for full-screen image viewing
+- Image categorization and filtering
+- Search functionality for finding specific images
+- Lazy loading for performance optimization
+- Image zoom and pan in lightbox
+- Optional: Image upload functionality
+- Optional: Favorites or collections feature
 
-Clone the repository and open the project locally:
+## Technical Recommendations
 
-```bash
-git clone https://github.com/kc-clintone/dev-wengi.git
-cd dev-wengi/projects/gallery
-```
+- Framework: React, Vue, or Svelte with a gallery-focused layout
+- Styling: Tailwind CSS or CSS Grid for responsive image layouts
+- Lightbox: Custom implementation or library like react-image-lightbox
+- Image Optimization: Next.js Image component or similar for optimization
+- Lazy Loading: Intersection Observer API or library for lazy loading
+- State Management: React Context, Pinia, or Svelte stores
+- Search: Client-side filtering or integration with a search API
+- Icons: SVG icons for gallery actions and navigation
 
-Then open `index.html` in your browser.
+## Key Components
 
-No build tools or dependencies are required.
+- GalleryGrid - Main image grid container
+- ImageCard - Individual image thumbnail component
+- Lightbox - Full-screen image viewer
+- FilterBar - Category and search filters
+- ImageUploader - Drag-and-drop upload component (optional)
+- ImageModal - Quick preview modal
 
-## Project Structure
+## Success Criteria
 
-```
-index.html
-styles.css
-script.js
-images/
-```
-
-## Contribution Goals
-
-This project is intentionally minimal and designed for learning and experimentation. Contributions are encouraged.
-
-You can help improve the project by:
-
-* Enhancing the user interface and user experience
-* Adding animations or transitions
-* Improving accessibility
-* Optimizing performance
-* Introducing new features
-
-## Skills You Will Practice
-
-* DOM manipulation
-* Event handling
-* CSS layout techniques (Grid and Flexbox)
-* UI state management
-
-## Contribution Ideas (GitHub Issues)
-
-These suggested issues are intended to help contributors get started and keep the project active.
-
-### Beginner
-
-**1. Add Image Captions**
-Display a caption for each image inside the lightbox.
-
-Tasks:
-
-* Add a `data-caption` attribute to images
-* Render the caption in the lightbox
-
-**2. Improve Button Styling**
-Enhance the appearance of navigation and close buttons.
-
-**3. Add Hover Overlay Effect**
-Display an overlay or icon when hovering over gallery images.
-
----
-
-### Intermediate
-
-**4. Add Fade Animation**
-Animate lightbox opening, closing, and image transitions.
-
-**5. Prevent Background Scroll**
-Disable page scrolling when the lightbox is open.
-
-**6. Add Thumbnail Navigation**
-Display preview thumbnails inside the lightbox.
-
----
-
-### Advanced
-
-**7. Add Swipe Support (Mobile)**
-Enable swipe gestures for navigating between images on mobile devices.
-
-**8. Implement Lazy Loading**
-Improve performance using the `loading="lazy"` attribute.
-
-**9. Modularize JavaScript**
-Refactor the code into reusable functions or modules.
-
-**10. Improve Accessibility**
-
-Tasks:
-
-* Add appropriate ARIA roles
-* Enhance keyboard navigation
-* Implement focus trapping
+- Images display in a clean, responsive grid layout
+- Lightbox provides smooth full-screen viewing
+- Filtering and search work efficiently
+- The gallery loads images performantly
+- The interface is visually appealing and intuitive

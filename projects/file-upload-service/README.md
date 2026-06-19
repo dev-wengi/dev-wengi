@@ -1,58 +1,45 @@
-# 📁 File Upload Service
+# File Upload Service
 
-Build an API to upload and serve files.
+## Project Overview
 
----
+Build a file upload service that handles file uploads, validation, storage, and retrieval. This backend service provides a robust API for managing file uploads with support for multiple file types and sizes.
 
-## 🎯 Goal
+## Core Features
 
-Learn how to handle files on the backend.
+- Accept file uploads via multipart/form-data
+- Validate file types, sizes, and formats
+- Store files locally or in cloud storage (S3, GCS)
+- Generate unique file identifiers and URLs
+- Support for multiple file uploads
+- File metadata extraction (name, size, type, dimensions)
+- Optional: Image thumbnail generation
+- Optional: File download and deletion endpoints
 
----
+## Technical Recommendations
 
-## 🧩 Requirements
+- Runtime: Node.js with Express or Fastify
+- Language: TypeScript for type safety
+- File Upload: Multer, formidable, or similar middleware
+- Storage: Local filesystem, AWS S3, Google Cloud Storage, or Cloudinary
+- Validation: Zod or Joi for file validation rules
+- Image Processing: Sharp or Jimp for image manipulation
+- Database: PostgreSQL or MongoDB for storing file metadata
+- Security: Implement file type validation and size limits
+- Testing: Jest or Vitest for unit and integration tests
 
-- Upload a file
-- Store the file
-- Serve the file via URL
+## API Endpoints
 
----
+- POST /api/upload - Upload a single file
+- POST /api/upload/multiple - Upload multiple files
+- GET /api/files/:id - Get file metadata
+- GET /api/files/:id/download - Download a file
+- DELETE /api/files/:id - Delete a file
+- GET /api/files - List all uploaded files
 
-## 🔁 Endpoints (Suggested)
+## Success Criteria
 
-- `POST /upload`
-- `GET /files/:name`
-
----
-
-## ⚙️ Features
-
-- Accept multipart/form-data
-- Save files to disk (or cloud)
-
----
-
-## ⚠️ Edge Cases
-
-- Large files
-- Unsupported file types
-
----
-
-## 🚫 Constraints
-
-- No third-party upload services (at first)
-
----
-
-## ⭐ Bonus Challenges
-
-- File size limits
-- Image preview endpoint
-- Cloud storage (S3, etc.)
-
----
-
-## 📦 Submission
-
-- PR with working upload + retrieval
+- Files are uploaded successfully with proper validation
+- File metadata is stored and retrievable
+- The service handles large files efficiently
+- File types are validated to prevent malicious uploads
+- The API is well-documented and testable
