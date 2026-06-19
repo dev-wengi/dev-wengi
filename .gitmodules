@@ -1,0 +1,48 @@
+[submodule "projects/auth-api"]
+	path = projects/auth-api
+	url = git@github.com:dev-wengi/auth-api.git
+[submodule "projects/auth-app"]
+	path = projects/auth-app
+	url = git@github.com:dev-wengi/auth-app.git
+[submodule "projects/chat-app"]
+	path = projects/chat-app
+	url = git@github.com:dev-wengi/chat-app.git
+[submodule "projects/chat-app-backend"]
+	path = projects/chat-app-backend
+	url = git@github.com:dev-wengi/chat-app-backend.git
+[submodule "projects/dashboard"]
+	path = projects/dashboard
+	url = git@github.com:dev-wengi/dashboard.git
+[submodule "projects/file-upload-service"]
+	path = projects/file-upload-service
+	url = git@github.com:dev-wengi/file-upload-service.git
+[submodule "projects/gallery"]
+	path = projects/gallery
+	url = git@github.com:dev-wengi/gallery.git
+[submodule "projects/github-explorer"]
+	path = projects/github-explorer
+	url = git@github.com:dev-wengi/github-explorer.git
+[submodule "projects/job-queue"]
+	path = projects/job-queue
+	url = git@github.com:dev-wengi/job-queue.git
+[submodule "projects/kanban-board"]
+	path = projects/kanban-board
+	url = git@github.com:dev-wengi/kanban-board.git
+[submodule "projects/notes-app"]
+	path = projects/notes-app
+	url = git@github.com:dev-wengi/notes-app.git
+[submodule "projects/quiz-app"]
+	path = projects/quiz-app
+	url = git@github.com:dev-wengi/quiz-app.git
+[submodule "projects/rate-limiter"]
+	path = projects/rate-limiter
+	url = git@github.com:dev-wengi/rate-limiter.git
+[submodule "projects/todo-api"]
+	path = projects/todo-api
+	url = git@github.com:dev-wengi/todo-api.git
+[submodule "projects/todo-app"]
+	path = projects/todo-app
+	url = git@github.com:dev-wengi/todo-app.git
+[submodule "projects/url-shortener"]
+	path = projects/url-shortener
+	url = git@github.com:dev-wengi/url-shortener.git
