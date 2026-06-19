@@ -22,7 +22,7 @@ This is the main dev-wengi repository. It contains everything you need to start 
 - `/tracks` - Structured learning paths for different tech stacks
 - `/challenges` - 30-day coding challenges across difficulty levels
 - `/projects` - Real-world projects you can contribute to
-- `/community-website` You can also contribute to the community website [here](wengi-website)
+- `/community-website` You can also contribute to the community website [here](https://github.com/dev-wengi/wengi-website)
 - `/docs` - Documentation and guides
 
 ---
