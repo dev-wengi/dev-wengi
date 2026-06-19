@@ -49,3 +49,6 @@
 [submodule "projects/wether-app"]
 	path = projects/wether-app
 	url = git@github.com:dev-wengi/wether-app.git
+[submodule "wengi-website"]
+	path = wengi-website
+	url = git@github.com:dev-wengi/wengi-website.git
