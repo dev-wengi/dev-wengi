@@ -46,3 +46,6 @@
 [submodule "projects/url-shortener"]
 	path = projects/url-shortener
 	url = git@github.com:dev-wengi/url-shortener.git
+[submodule "projects/wether-app"]
+	path = projects/wether-app
+	url = git@github.com:dev-wengi/wether-app.git
