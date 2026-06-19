@@ -1,5 +1,12 @@
 # Dev-Wengi
 
+
+<div align="center">
+  
+  ![Dev-Wengi Logo](assets/logos/2.png)
+</div>
+
+
 **Learn to code by building real projects, with real people.**
 
 **dev.wengi** is a developer-focused community designed to inspire, support, and empower individuals at every stage of their tech journey. The community simplifies the process of learning and breaking into tech by providing curated resources, practical guidance, and opportunities to work on real-world problems.
@@ -15,7 +22,7 @@ This is the main dev-wengi repository. It contains everything you need to start 
 - `/tracks` - Structured learning paths for different tech stacks
 - `/challenges` - 30-day coding challenges across difficulty levels
 - `/projects` - Real-world projects you can contribute to
-- `/community-website` - The dev.wengi community website
+- `/community-website` You can also contribute to the community website [here](wengi-website)
 - `/docs` - Documentation and guides
 
 ---
