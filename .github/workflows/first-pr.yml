@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Check if first PR and update contributors
         uses: actions/github-script@v7
@@ -85,33 +85,35 @@ jobs:
                   return;
                 }
 
-                // Add to First PR Club section
-                const firstPRSectionRegex = /(## 🟢 First PR Club\s+These legends shipped their first contribution:\s+)(- @[^\n]+)/;
-                contributorsFile = contributorsFile.replace(
+                // Add to First PR Club section - insert after the "These legends..." line
+                const firstPRSectionRegex = /(## 🟢 First PR Club\s+These legends shipped their first contribution:)\s*\n/;
+                if (!firstPRSectionRegex.test(contributorsFile)) {
+                  core.warning(`Could not find "First PR Club" section in CONTRIBUTORS.md with expected format`);
+                  return;
+                }
+
+                const updated = contributorsFile.replace(
                   firstPRSectionRegex,
-                  `$1- @${author}\n$2`
+                  `$1\n- @${author}\n`
                 );
 
-                fs.writeFileSync('CONTRIBUTORS.md', contributorsFile);
-                core.info(`Added @${author} to CONTRIBUTORS.md`);
+                if (updated === contributorsFile) {
+                  core.warning(`Regex replacement did not modify CONTRIBUTORS.md - check file format`);
+                  return;
+                }
+
+                fs.writeFileSync('CONTRIBUTORS.md', updated);
+                core.info(`✅ Added @${author} to CONTRIBUTORS.md First PR Club`);
               } catch (error) {
-                core.warning(`Could not update CONTRIBUTORS.md: ${error.message}`);
+                core.error(`Could not update CONTRIBUTORS.md: ${error.message}`);
+                throw error;
               }
             } else {
               core.info(`${author} has ${mergedPRs.length} merged PRs`);
             }
 
-      - name: Commit and push changes
-        if: success()
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add CONTRIBUTORS.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: add @${{ github.event.pull_request.user.login }} to CONTRIBUTORS.md 🎉" && git push)
-
-      - name: Get Contributor Email
-        if: success()
-        id: get-email
+      - name: Get contributor email
+        id: contributor_email
         uses: actions/github-script@v7
         with:
           script: |
@@ -120,71 +122,58 @@ jobs:
               const user = await github.rest.users.getByUsername({
                 username: author
               });
-              
-              // Try to get public email first
-              let email = user.data.email;
-              
-              // If no public email, try to get from commits
-              if (!email) {
-                const commits = await github.rest.repos.getCommit({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ref: context.payload.pull_request.head.sha
-                });
-                email = commits.data.commit.author.email;
-              }
-              
+              const email = user.data.email;
               if (email) {
                 core.setOutput('email', email);
-                core.info(`Found email: ${email}`);
+                core.info(`Contributor email: ${email}`);
               } else {
-                core.warning(`Could not find email for ${author}`);
+                core.warning(`No public email found for ${author}`);
+                core.setOutput('email', '');
               }
             } catch (error) {
-              core.warning(`Error getting user info: ${error.message}`);
+              core.error(`Error fetching user info: ${error.message}`);
+              core.setOutput('email', '');
             }
 
-      - name: Send Welcome Email
-        if: success() && steps.get-email.outputs.email && secrets.EMAIL_SERVER
+      - name: Send Outlook email notification
+        if: success() && github.event.pull_request.merged == true && steps.contributor_email.outputs.email != ''
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: ${{ secrets.EMAIL_SERVER }}
-          server_port: ${{ secrets.EMAIL_PORT || '587' }}
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "🎉 Welcome to Dev-Wengi, @${{ github.event.pull_request.user.login }}!"
-          to: ${{ steps.get-email.outputs.email }}
-          from: Dev-Wengi Team <${{ secrets.EMAIL_FROM || secrets.EMAIL_USERNAME }}>
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.OUTLOOK_EMAIL }}
+          password: ${{ secrets.OUTLOOK_PASSWORD }}
+          subject: "🎉 Welcome to Dev-Wengi - First PR Merged!"
+          to: ${{ steps.contributor_email.outputs.email }}
+          from: ${{ secrets.OUTLOOK_EMAIL }}
           body: |
-            👋 Welcome to Dev-Wengi, @${{ github.event.pull_request.user.login }}!
+            Congratulations! 🎉
 
-            You've just joined an amazing community of builders! 🚀
+            Your first PR has been merged on Dev-Wengi!
 
-            Your PR "${{ github.event.pull_request.title }}" has been successfully merged, and you're now part of the First PR Club!
+            PR Title: ${{ github.event.pull_request.title }}
+            PR #: ${{ github.event.pull_request.number }}
 
-            ---
+            You've officially joined the First PR Club! 🚀
+            Keep building amazing things!
 
-            📚 GETTING STARTED
-            ==================
-            • Explore challenges: https://github.com/dev-wengi/dev-wengi/tree/main/challenges
-            • Browse projects: https://github.com/dev-wengi/dev-wengi/tree/main/projects
-
-            Pick your track:
-            - Frontend: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/frontend
-            - Backend: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/backend
-            - DevOps: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/devops
-            - Security: https://github.com/dev-wengi/dev-wengi/tree/main/tracks/security
-
-            Read the guide: https://github.com/dev-wengi/dev-wengi/blob/main/CONTRIBUTING.md
-
-            ---
-
-            🤝 COMMUNITY STANDARDS
-            =====================
-            • Be respectful and inclusive
-            • Help others grow and learn
-            • Share knowledge and feedback generously
-            • No gatekeeping — everyone's welcome here
+      - name: Commit and push changes
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CONTRIBUTORS.md
+          if git diff --cached --quiet; then
+            echo "✓ No changes to commit"
+          else
+            git commit -m "docs: add @${{ github.event.pull_request.user.login }} to CONTRIBUTORS.md 🎉"
+            if git push; then
+              echo "✓ Changes pushed successfully"
+            else
+              echo "❌ Failed to push changes"
+              exit 1
+            fi
+          fi
             • Full code of conduct: https://github.com/dev-wengi/dev-wengi/blob/main/CODE_OF_CONDUCT.md
 
             ---
@@ -305,6 +294,12 @@ jobs:
             </body>
             </html>
 
-      - name: Email Not Available
-        if: success() && !steps.get-email.outputs.email
-        run: echo "⚠️  Could not retrieve email for contributor. Welcome message will still be posted as PR comment."
+      - name: Summary
+        if: success()
+        run: |
+          echo "✅ Workflow completed"
+          echo "  • First PR detection: Complete"
+          echo "  • Label added: first-pr"
+          echo "  • Comment posted: Yes"
+          echo "  • CONTRIBUTORS.md updated: Check step output"
+          echo "  • Email: ${{ steps.get-email.outputs.email || 'Not available' }}"

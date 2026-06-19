@@ -8,13 +8,11 @@ Welcome to the builders.
 
 These legends shipped their first contribution:
 
-- @username1
 
 ---
 
 ## 🚀 Repeat Contributors
 
-- @usernameX (5+ PRs)
 
 ---
 
